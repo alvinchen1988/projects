@@ -1,0 +1,88 @@
+
+
+/*      TABLE OF CONTENT
+=================================
+
+1.0 - Reset (reset.css)
+2.0 - Typography(typography.css)
+3.0 - General styles(mobile.css)
+    3.1 - clearfix
+4.0 - Header style
+5.0 - Nav styles
+	5.1 - JS enabled
+	5.2 - JS disabled
+6.0 - Footer style
+7.0 - Schedule-page style
+8.0 - Student-page style
+9.0 - Benefit-page style
+10  - Certification-page style
+11  - Course-page style
+12  - Contact-page style
+
+13  - Media queries style
+	13.1 - Min-width : 468px(tablet.css)
+	13.2 - Min-width : 568px
+	13.3 - Min-width : 769px(desktop.css)
+	13.4 - Min-width : 900px
+	13.5 - Min-width : 1120px
+	13.6 - Min-width: 1500px
+
+=================================*/
+
+
+
+
+/*     #13 - Media query(tablet)
+---------------------------------*/
+
+/* ##### 13.1 - Min-width : 468px; */
+
+@media only screen and (min-width: 468px) {
+    .home-main-nav a {
+        width: 23%;
+        margin-right: 5.1666%;
+        margin-bottom: 15px;
+        margin-left: 5.1666%;
+        padding: 11.5% 0;
+    }
+
+    .js .overlay .subpage-mobile-nav ul {
+        width: 60%;
+        height: 200px;
+        margin-top: -100px;
+        margin-left: -30%;
+    }
+
+    .js .overlay .subpage-mobile-nav a {
+        float: left;
+        width: 47.5%;
+        margin-right: 5%;
+    }
+
+    .js .overlay .subpage-mobile-nav li:nth-child(even) a {
+        margin-right: 0;
+    }
+
+    .js .overlay .subpage-mobile-nav li:nth-child(7) a {
+        border-bottom: none;
+    }
+}
+
+
+/* ##### 13.2 - Min-width : 568px; */
+
+
+@media only screen and (min-width: 568px) {
+    .no-js .home-main-nav {
+        margin-top: 10px;
+    }
+
+    .home-main-nav a {
+        width: 20%;
+        margin-right: 6.6666%;
+        margin-left: 6.6666%;
+        padding: 10% 0;
+    }
+}
+
+

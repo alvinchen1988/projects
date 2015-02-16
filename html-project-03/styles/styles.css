@@ -1,0 +1,824 @@
+@charset 'utf-8';
+/* CSS Document */
+
+/*      TABLE OF CONTENT
+=================================
+
+1.0 - Reset
+2.0 - General styles
+    2.1 - clearfix
+3.0 - Header style
+4.0 - Body styles
+    4.1 - sunshine
+    4.2 - wynwood
+    4.3 - vizcaya
+    4.4 - map
+    4.5 - sidebar
+    4.6 - form
+5.0 - Footer style
+6.0 - Thank-you page style
+7.0 - credits page style
+
+=================================*/
+
+
+/*      1.0 -  Reset
+---------------------------------*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+main,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*      2.0 - General styles
+---------------------------------*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: 980px;
+    background: #fff;
+    background-image: url(../images/agsquare_@2X.png);
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+
+body,
+select,
+input,
+textarea {
+    box-sizing: border-box;
+    font-family: 'proxima-nova',sans-serif;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+    font-family: 'proxima-nova',sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #333;
+    line-height: 2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery__item {
+    float: left;
+    margin-right: 2%;
+}
+
+.text-highlight {
+    margin-right: 3px;
+    color: RGB(246,93,79);
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* ##### 2.1 - Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*      3.0 - Header style
+---------------------------------*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 120px;
+    padding: 10px 20px;
+    -o-transition: all 0.5s;
+       transition: all 0.5s;
+    border-bottom: 3px solid #e7e7e7;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0,0,0,0.8);      /*1px solid #dbdbdb;*/
+}
+
+.container {
+    min-width: 960px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.branding {
+    display: block;
+    float: left;
+    width: 300px;
+    margin-top: 25px;
+    -o-transition: all 0.5s;
+       transition: all 0.5s;
+}
+
+.logo {
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: RGB(246,93,79);
+    font-family: 'Raleway Dots', cursive;
+    font-size: 5.8rem;
+    font-weight: 400;
+}
+
+.primary-nav {
+    float: left;
+    width: 490px;
+    margin-top: 32px;
+    -o-transition: all 0.5s;
+       transition: all 0.5s;
+}
+
+.primary-nav__item {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.primary-nav a {
+    position: relative;
+    display: block;
+    -o-transition: all 0.6s ease-out;
+       transition: all 0.6s ease-out;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+[href$='page']:before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+            transition:         transform: 0.3s ease-out;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    border-bottom: 1px solid RGB(246,93,79);
+}
+
+[href^='#sunshine']:hover:before {
+    -webkit-transform: scaleX(0.66);
+        -ms-transform: scaleX(0.66);
+            transform: scaleX(0.66);
+}
+
+[href^='#wynwood']:hover:before {
+    -webkit-transform: scaleX(0.68);
+        -ms-transform: scaleX(0.68);
+            transform: scaleX(0.68);
+}
+
+[href^='#vizcaya']:hover:before {
+    -webkit-transform: scaleX(0.55);
+        -ms-transform: scaleX(0.55);
+            transform: scaleX(0.55);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+    -o-transition: all 0.5s ease-out;
+       transition: all 0.5s ease-out;
+    color: RGB(246,93,79);
+}
+
+.primary-nav .nav-is-highlighted {
+    transition: all 0.4s ease-out;
+    color: RGB(246,93,79);
+}
+
+.button.subscribe {
+    float: right;
+    margin-top: 38px;
+    -o-transition: all 0.5s;
+       transition: all 0.5s;
+    background-color: rgb(132,219,138);
+}
+
+/*transition effect of nav after scrolling down the page*/
+.header-is-shrunk {
+    z-index: 9999;
+    height: 75px;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: 0 0 8px RGB(246,93,79);
+}
+
+.header-is-shrunk .branding {
+    margin-top: 2px;
+}
+
+.header-is-shrunk .primary-nav {
+    margin-top: 5px;
+}
+
+.header-is-shrunk .button.subscribe {
+    margin-top: 9px;
+}
+
+/*      4.0 - Body style
+---------------------------------*/
+
+/* ##### 4.1 - sunshine */
+
+.container.container--body {
+    padding: 135px 20px 10px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.container__sunshine {
+    float: left;
+    width: 70%;
+}
+
+.feature-image {
+    margin-bottom: 40px;
+    padding-top: 25px;
+}
+
+.container__sunshine p {
+    margin-bottom: 40px;
+}
+
+.gallery.gallery--sunshine {
+    padding: 20px 10px 0;
+    border-top: 1px solid rgba(246,93,79,0.3);
+    border-bottom: 1px solid rgba(246,93,79,0.3);
+    background-color: white;
+}
+
+.gallery__item.item--sunshine {
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    -o-transition: all 0.5s ease-out;
+       transition: all 0.5s ease-out;
+    opacity: 0.8;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(100, 100, 100, 0.4), 0 0 40px rgba(100, 100, 100, 0.1) inset;
+}
+
+.gallery__item.item--sunshine:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.gallery__item:hover {
+    opacity: 1;
+}
+
+.gallery img {
+    cursor: pointer;
+}
+
+.gallery__caption {
+    display: block;
+    margin-top: 0;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+/*image corner folding effect on hover*/
+
+.folded-corner {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 0;
+    height: 0;
+    -o-transition: border-width 0.4s ease-out;
+       transition: border-width 0.4s ease-out;
+    border-width: 0;
+    border-style: solid;
+    border-color: #fff #fff transparent transparent;
+    border-radius: 0 0 0 5px;
+    background: hsla(260,5%,60%,0.2);
+    box-shadow: 2px -2px 0 #fff, 0 1px 1px rgba(0,0,0,0.1), -1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.gallery__item:hover .folded-corner {
+    border-width: 0 40px 40px 0;
+}
+
+.folded-corner {
+    background: hsla(260,5%,75%,0.5);
+}
+
+/* ##### 4.2 - wynwood */
+
+.container__wynwood {
+    margin-top: 53px;
+    padding-bottom: 53px;
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.hero {
+    height: 0;
+    margin-top: 53px;
+    margin-bottom: 55px;
+    padding-bottom: 34.71%;
+    background-size: cover;
+}
+
+.hero.hero--wynwood {
+    background: url(../images/wynwood-bg.jpg) no-repeat center center;
+}
+
+.hero__title {
+    display: inline-block;
+    padding: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: 5px solid white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero__title.hero__title--wynwood {
+    margin-top: 20%;
+    margin-left: 60%;
+}
+
+.article {
+    width: 65%;
+    margin-right: auto;
+    margin-bottom: 55px;
+    margin-left: auto;
+}
+
+.article__title {
+    margin-bottom: 25px;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid #c1c1c1;
+    border-bottom: 2px solid #c1c1c1;
+    font-weight: 300;
+}
+
+.article__title h3 {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.gallery h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.gallery__item.item-wynwood {
+    width: 23.5%;
+    margin-top: 40px;
+}
+
+.gallery__item.item-wynwood:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+/* ##### 4.3 - vizcaya */
+
+.hero.hero--vizcaya {
+    margin-bottom: 30px;
+    background-image: url(../images/garden-bg2.jpg);
+}
+
+.hero__title.hero__title--vizcaya {
+    margin-top: 25%;
+    margin-left: 10%;
+    background: rgba(0,0,0,0.6);
+}
+
+.article__vizcaya {
+    width: 100%;
+}
+
+.image-vizcaya {
+    float: right;
+    width: 50%;
+    margin-left: 3%;
+}
+
+.vizcaya-intro {
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.image-vizcaya img {
+    float: left;
+    width: 49%;
+    margin-top: 12px;
+    margin-right: 2%;
+}
+
+.image-vizcaya img:last-child {
+    margin-right: 0;
+}
+
+/* ##### 4.4 - map */
+
+.google-map {
+    margin: 53px 0;
+}
+
+.map-container iframe {
+    position: relative;
+    top: 9px;
+    display: block;
+    float: left;
+    width: 65%;
+    height: 400px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    border: 5px solid #a0b052;
+}
+
+.map-container {
+    margin-top: 40px;
+}
+
+.container__google-map h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+/* ##### 4.5 - sidebar */
+
+.biography {
+    float: right;
+    width: calc(30% - 20px);
+    min-width: 265px;
+    max-width: 375px;
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #b2b2b2;
+}
+
+.biography__image {
+    width: 50%;
+    margin: 15px auto 15px;
+    border-radius: 100%;
+}
+
+.biography h1 {
+    text-align: center;
+    color: RGB(246,93,79);
+    font-weight: 200;
+}
+
+.biography p {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+/* ##### 4.6 - form */
+
+input {
+    width: 300px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+[type='checkbox'] {
+    width: auto;
+}
+
+[name='input_country'] {
+    height: 30px;
+}
+
+.field {
+    height: 40px;
+}
+
+.field.select {
+    height: 100px;
+}
+
+.field.comment {
+    height: 200px;
+}
+
+.label {
+    display: inline-block;
+    padding-top: 6px;
+    vertical-align: middle;
+}
+
+.label.label--comment {
+    position: relative;
+    top: 20px;
+}
+
+.container__form {
+    border-radius: 5px;
+}
+
+.form {
+    padding: 20px;
+    padding-top: 45px;
+    letter-spacing: 1px;
+}
+
+.xbutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.call-action {
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    border: 3px dotted RGB(246,93,79);
+}
+
+.user-input {
+    display: block;
+    float: right;
+    width: 300px;
+}
+
+.button.button--submit {
+    float: right;
+    clear: both;
+    height: 50px;
+    margin-top: 15px;
+    background-color: rgb(132,219,138);
+}
+
+.hide {
+    display: none;
+}
+
+/*    5.0 - footer style
+---------------------------------*/
+
+.footer {
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid #c1c1c1;
+}
+
+.container.container--foot {
+    text-align: center;
+}
+
+.copyright {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: black;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+    color: RGB(246,93,79);
+}
+
+/*    6.0 - thank-you page style
+---------------------------------*/
+
+.thank-you a {
+    text-decoration: none;
+    color: black;
+}
+
+.thank-you span {
+    color: RGB(246,93,79);
+    font-weight: 600;
+}
+
+.thank-you .button {
+    text-align: center;
+    color: white;
+    background-color: rgb(132,219,138);
+}
+
+.thank-you div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin: -100px 0 0 -200px ;
+    font-size: 2.2rem;
+}
+
+/*    7.0 - credit-page style
+---------------------------------*/
+
+.credits ul {
+    text-align: center;
+}
+
+.credits li {
+    margin-top: 60px;
+    font-size: 4rem;
+}
+
+.credits p {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.credits a {
+    text-decoration: none;
+    color: black;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}

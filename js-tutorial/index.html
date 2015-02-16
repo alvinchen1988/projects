@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery Plugins Tutorial</title>
+	<link rel="stylesheet" href="styles/jquery.gridster.css">
+	<link rel="stylesheet" href="styles/alertify.core.css">
+	<link rel="stylesheet" href="styles/alertify.default.css">
+	<link rel="stylesheet" href="styles/prism.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic|Ubuntu+Condensed|Inconsolata' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body id="top">
+
+	<header class="header">
+
+		<div class="strips clearfix" id="top">
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+			<div class="strip"></div>
+		</div> <!-- end strips -->
+
+		<div class="self-intro clearfix">
+
+			<div class="self-intro__avatar">
+				<img src="img/head2.png" alt="An avatat of the author of this website">
+			</div>
+
+			<div class="self-intro__message">
+
+				<p>Hi, I'm Alvin. I am your tutor today on <span class="text-highlight">jQuery</span>. I will walk you through three jQuery plugins and hopefully at the end you will be able to customize them to your heart's content.</p>
+
+			</div>
+
+		</div> <!-- end intro -->
+
+	</header> <!-- end header -->
+
+	<nav class="primary-nav">
+		<ul class="primary-nav__list clearfix">
+			<li class="primary-nav__item"><a class="primary-nav__link" href="#lesson-01">Lesson 1</a></li>
+			<li class="primary-nav__item"><a class="primary-nav__link" href="#lesson-02">Lesson 2</a></li>
+			<li class="primary-nav__item"><a class="primary-nav__link scroll logo" href="#content">js 1<span>0</span>1</a></li>
+			<li class="primary-nav__item"><a class="primary-nav__link" href="#lesson-03">Lesson 3</a></li>
+			<li class="primary-nav__item"><a class="primary-nav__link" href="#contact">Survey</a></li>
+		</ul>
+	</nav>
+
+	<main class="clearfix" id="content" >
+		<div class="container container--body clearfix">
+
+			<div class="js-intro clearfix">
+
+				<p>Before we begin the lessons, please answer to yourself the following two questions:</p>
+				<p>1. What is the difference between Javascript and jQuery?</p>
+				<p>2. What exactly do they add to a website?</p>
+				<p>For those who are not sure about the answers, please allow me to give a breif introduction of Javascript and jQuery.</p>
+
+				<div class="js-intro__box">
+					<h1 class="text-highlight">What is Javascript?</h1>
+					<p>Javascript is a client-side language that controls the behaviors of webpages. By manipulating the Document Object Model(DOM), you can make webpages that interact with the users. As web applications become more and more popular, javascript has become an essential skill in a web developer's toolkit. </p>
+				</div>
+
+				<div class="js-intro__box">
+					<h1 class="text-highlight">What is jQuery?</h1>
+					<p>jQuery is a lightweight, "write less, do more", JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+				</div>
+
+				<div class="js-intro__box">
+					<h1 class="text-highlight">Why jQuery?</h1>
+					<p>The purpose of jQuery is to make it much easier to use JavaScript on your website.	jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code. It supports all main-stream browsers and has plugins for almost any task out there.</p>
+				</div>
+
+				<p>Now that you know how powerful javascript is, it's time for me to show you the three really cool jQuery plugins. I think you will like them all and find their practical uses later on in your projects. Ready? Scroll the mouse down!</p>
+
+			</div> <!-- end js-intro -->
+
+
+
+			<div class="lesson" id="lesson-01">
+			<h1>Lesson 1: The Image Inspector </h1>
+			<p>In our first lesson, I will show you step by step how to use a plugin called <a href="http://pep.briangonzalez.org/" target="_blank">Pep</a>. Pep is a lightweight jQuery plugin which turns any DOM element into a draggable object. It works across mostly all browsers, from old to new, from touch to click. Follow the steps below to see how i turn a regular image into an image with an inspector.</p>
+			<h2>Demo 1</h2>
+
+
+			<!-- demo1 code -->
+			<div class="demo1">
+  			<div class="image viewer">
+    			<div class="magnifier"></div>
+  			</div>
+  			<div class="image result"></div>
+			</div>
+			<!-- demo1 code ends -->
+
+			<p class="steps"><span>Step 1</span> - Download the plugin from <a href="http://pep.briangonzalez.org/" target="_blank">here</a> and put the jquery.pep.js file in your javascript folder. Don't forget to include the jquery.min.js file and your own js script as well. Link them in your html markup before the closing body tag.</p>
+			<pre class="language-markup">
+				<code>
+
+	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">&lt;/script>
+	&lt;script src="scripts/jquery.pep.js">&lt;/script>
+	&lt;script src="scripts/script.js">&lt;/script>
+				</code>
+			</pre>
+			<p class="steps"><span>Step 2</span> - In you body markup, write the html code like this. For demonstration purpose i set the image as a background. If you like you can set it as a foreground image using &lt;img> tag.</p>
+			<pre class="language-markup">
+				<code>
+
+	&lt;div class="demo1">
+	 &lt;div class="image viewer">
+	    &lt;div class="magnifier">&lt;/div>
+	 &lt;/div>
+	 &lt;div class="image result">&lt;/div>
+    &lt;/div>
+				</code>
+			</pre>
+			<p class="steps"><span>Step 3</span> -  Style your CSS.</p>
+			<pre class="language-css">
+				<code>
+	.demo1 {
+	  height: 597px;
+	  margin: 0 auto;
+	}
+	.demo1 .image {
+	  width: 50%;
+	  height: 100%;
+	  background: url("../img/old-man.jpg") no-repeat center center;
+	  float: left;
+	  margin: 0;
+	  padding: 0;
+	}
+	.demo1 .image:first-child {
+	  border-right: 1px solid #342420;
+	}
+	.demo1 .image.result {
+	  background-position: 50% 25%;
+	}
+	.demo1 .image.viewer {
+	  -moz-background-size: 100%;
+	  -o-background-size: 100%;
+	  -webkit-background-size: 100%;
+	  background-size: 100%;
+	}
+	.demo1 .image.viewer .magnifier {
+	  position: absolute;
+	  top: 20%;
+	  left: 45%;
+	  width: 43px;
+	  height: 60px;
+	  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEElEQVQIW2P8DwSMIMAABQA+HQQDNlbHLwAAAABJRU5ErkJggg==);
+	  opacity: 0.6;
+	  cursor: move;
+	}
+				</code>
+			</pre>
+			<p class="steps"><span>Step 4</span> -  Write javascript in the javascript file you created</p>
+			<pre class="language-javascript">
+				<code>
+	var $result    = $('.image.result');
+	var $viewer    = $('.image.viewer');
+	var $magnifier = $viewer.find('.magnifier');
+
+	$magnifier.pep({
+  	constrainTo: 'parent',
+  	shouldEase: false,
+  	drag: function(ev, obj){
+
+  	var pos = $magnifier.position();
+
+  	var x = ( (pos.left + $magnifier.outerWidth()/2 )/$viewer.width()  )*100 + "%";
+  	var y = ( (pos.top + $magnifier.outerHeight()/2 )/$viewer.height() )*100 + "%";
+
+ 	 $result.css('background-position', [x, y].join(' '));
+
+ 	 }
+	})
+				</code>
+			</pre>
+			<p>That's all. Not too hard right? If you are having problem, refer to the documentation page on <span class="text-highlight"><a href="http://pep.briangonzalez.org/" target="_blank">Pep</a></span>. That's it for lesson 1. Scroll down to continue to lesson 2.</p>
+		</div><!-- end lesson1 -->
+
+		<div class="lesson" id="lesson-02">
+			<h1>Lesson 2: Use Alertify To Make Your Browser Dialogs Fancier</h1>
+			<p>In our second lesson, I will show you step by step how to use a plugin called <a href="http://fabien-d.github.io/alertify.js/" target="_blank">Alertify</a>. Alertify.js is a lightweight jQuery plugin which makes the default browser dialogs much prettier. It works across mostly all browsers, from old to new, from touch to click. Try out the demo below and follow step by step to see how it works.</p>
+			<h2>Demo 2</h2>
+
+
+			<!-- demo2 code -->
+			<div class="demo2">
+  			<button class="button button--english" type="button" id="prompt">Hello</button>
+  			<button class="button button--french" type="button" id="confirm">Bonjour</button>
+  			<button class="button button--chinese" type="button" id="forever">你好</button>
+			</div>
+			<!-- demo2 code ends -->
+
+			<p class="steps"><span>Step 1</span> - Download the plugin from <a href="http://fabien-d.github.io/alertify.js/" target="_blank">here</a> and put the alertify.min.js file in your javascript folder. Also put the alertify.core.css and alertify.default.css into your css folder. Don't forget to include the jquery.min.js file and your own js script as well. Your markup should look like this:</p>
+			<pre class="language-markup">
+				<code>
+	&lt;head>
+	&lt;link rel="stylesheet" href="styles/alertify.core.css">
+	&lt;link rel="stylesheet" href="styles/alertify.default.css">
+	&lt;/head>
+
+	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">&lt;/script>
+    &lt;script src="scripts/alertify.min.js">&lt;/script>
+	&lt;script src="scripts/script.js">&lt;/script>
+				</code>
+			</pre>
+			<p class="steps"><span>Step 2</span> - In you body markup, you can write the html code to your needs. For demonstration purpose i made three buttons. So this is what my html looks like:</p>
+			<pre class="language-markup">
+				<code>
+
+	&lt;div class="demo2">
+  	 &lt;button type="button" id="prompt">Hello&lt;/button>
+  	 &lt;button type="button" id="confirm">Bonjour&lt;/button>
+  	 &lt;button type="button" id="forever">你好&lt;/button>
+	&lt;/div>
+				</code>
+			</pre>
+			<p class="steps"><span>Step 3</span> - Style your CSS(Optional) - The default CSS styles are actually quite good. I only changed the margin-top property of the nav element. But if you want to tweak it a bit more. Feel free to do so in the alertify.default.css file.</p>
+			<pre class="language-css">
+				<code>
+	nav.alertify-buttons{
+	margin-top: 18px;
+	}
+				</code>
+			</pre>
+			<p class="steps"><span>Step 4</span> - Write javascript in the javascript file you created</p>
+			<pre class="language-javascript">
+				<code>
+	function reset () {
+	$("#toggleCSS").attr("href", "../styles/alertify.default.css");
+	alertify.set({
+	labels : {
+	ok     : "OK",
+	cancel : "Cancel"
+	},
+	delay : 5000,
+	buttonReverse : false,
+	// buttonFocus   : "ok"
+	});
+	}
+
+	$("#confirm").on( 'click', function () {
+	reset();
+	alertify.set({ labels: { ok: "Yes, indeed!", cancel: "Piece of cake.." } });
+	alertify.confirm("Do you find coding javascript challenging?", function (e) {
+	if (e) {
+	alertify.success("Don't be discouraged! Follow along and you will be just fine.");
+	} else {
+	alertify.error("I'm impressed by your coding skill.");
+	}
+	});
+	return false;
+	});
+
+	$("#prompt").on( 'click', function () {
+	reset();
+	alertify.prompt("Hello! Thank you for dropping by my JS tutorial page. May i have your name please?", function (e, str) {
+	if (e) {
+	alertify.success("How are you doing today? " + str);
+	} else {
+	alertify.error("I am sorry to see you go.");
+	}
+	}, "enter your name");
+	return false;
+	});
+
+	$("#forever").on( 'click', function () {
+	reset();
+	alertify.set({ labels: { ok: "It is helpful", cancel: "Not so much" }, delay: 10000, });
+	alertify.confirm("Is this JS toturial helpful to you?", function (e) {
+	if (e) {
+	alertify.success("I'm glad to hear. Please share this website with your friends so more people can learn coding.");
+	} else {
+	alertify.error("I'm sorry it did't help you. Please help me improve this website by filling out the form below.");
+	}
+	});
+	return false;
+	});
+				</code>
+			</pre>
+
+			<p>That's all. Not too hard right? If you are having problem, refer to the documentation page on <a href="http://fabien-d.github.io/alertify.js/" target="_blank">Alertify</a>. That's it for lesson 2. Scroll down to continue to lesson 3.</p>
+		</div> <!-- end lesson2 -->
+
+		<div class="lesson lesson--03" id="lesson-03">
+			<h1>Lesson 3: The draggable Widgets </h1>
+			<p>In this last lesson, I will show you step by step how to use a plugin called <a href="http://pep.briangonzalez.org/" target="_blank">Gridster.js</a>. Gridster is a lightweight jQuery plugin which can turn any DOM element into widgets that are draggable. It is mostly used to make expandable and movable divs. It works across mostly all browsers, from old to new, from touch to click. Follow the steps below to see how i made the interface look like an ipad.</p>
+			<h2>Demo 3</h2>
+
+
+			<!-- demo3 code -->
+			<div class="demo3 gridster">
+				<div class="ipad">
+					<ul></ul>
+				</div>
+
+			</div>
+				<!-- demo3 code ends -->
+
+			<p class="steps"><span>Step 1</span> - Download the plugin from <a href="http://gridster.net/" target="_blank">here</a> and put the gridster.min.js file in your javascript folder. Also put the jquery.gridster.css into your css folder. Don't forget to include the jquery.min.js file and your own js script as well. Your markup should look like this:</p>
+
+			<pre class="language-markup">
+				<code>
+&lt;link rel="stylesheet" href="styles/jquery.gridster.css">
+
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">&lt;/script>
+&lt;script src="scripts/jquery.gridster.min.js">&lt;/script>
+				</code>
+			</pre>
+
+			<p class="steps"><span>Step 2</span> - In you body markup, write the html code like this. You can make your own semantic markup as you like.</p>
+			<pre class="language-markup">
+				<code>
+	&lt;div class="demo3 gridster">
+	 &lt;div class="ipad">
+		&lt;ul>
+		&lt;/ul>
+	 &lt;/div>
+   &lt;/div>
+				</code>
+			</pre>
+
+			<p class="steps"><span>Step 3</span> -  Style your CSS.</p>
+			<pre class="language-css">
+				<code>
+
+	.ipad{
+	background-image: url(../img/ipad-landscape.png);
+	background-repeat: no-repeat;
+	background-position: 40px 0;
+	height: 680px;
+	}
+
+	.gridster ul{
+	width: 920px !important;
+	padding-top: 95px;
+	}
+
+	.gridster li{
+		width: 120px;
+		height: 120px;
+		position: absolute;
+	}
+
+	.gridster li[data-col="1"]{
+		left: 150px;
+	}
+
+	.gridster li[data-col="2"]{
+		left: 315px;
+	}
+
+	.gridster li[data-col="3"]{
+		left: 480px;
+	}
+
+	.gridster li[data-col="4"]{
+		left: 645px;
+	}
+
+	.gridster li[data-row="1"]{
+		top: 100px;
+	}
+
+	.gridster li[data-row="2"]{
+		top: 250px;
+	}
+
+	.gridster li[data-row="3"]{
+		top: 400px;
+	}
+				</code>
+			</pre>
+
+			<p class="steps"><span>Step 4</span> - Write javascript in the javascript file you created</p>
+			<pre class="language-javascript">
+				<code>
+	var gridster;
+
+    $(function(){
+
+      gridster = $(".gridster ul").gridster({
+          widget_margins: [40, 40],
+          widget_base_dimensions: [100, 100],
+          autogenerate_stylesheet: false,
+          max_cols: 4
+      }).data('gridster');
+
+      var widgets = [
+          ['<li>0</li>', 1, 1],
+          ['<li>1</li>', 1, 1],
+          ['<li>2</li>', 1, 1],
+          ['<li>3</li>', 1, 1],
+          ['<li>4</li>', 1, 1],
+          ['<li>5</li>', 1, 1],
+          ['<li>6</li>', 1, 1],
+          ['<li>7</li>', 1, 1],
+          ['<li>8</li>', 1, 1],
+          ['<li>9</li>', 1, 1],
+          ['<li>10</li>', 1, 1],
+          ['<li>11</li>', 1, 1],
+      ];
+
+      $.each(widgets, function(i, widget){
+          gridster.add_widget.apply(gridster, widget)
+      });
+    });
+				</code>
+			</pre>
+
+			<p>That's all. Not too hard right? If you are having problem, refer to the documentation page on <a href="http://gridster.net/" target="_blank">Gridster</a>. That's it for our last lesson. If you have time, I would kindly ask you to fill out the evalution form below to help me make this course better in the future!</p>
+		</div> <!-- end lesson3 -->
+
+
+
+		<div class="form" id="contact">
+
+			<form action="thankyou.html">
+
+				<span class="form__title text-highlight">Course Evaluation</span>
+
+				<label class="label" for="user_name">Name:</label>
+				<input type="text" name="user_name" id="user_name" required>
+
+				<label class="label" for="user_email">E-mail:</label>
+				<input type="text" name="user_email" id="user_email">
+
+				<label class="label" for="user_rating">Rating:</label>
+
+				<select name="user_rating" id="user_rating" required>
+					<option value="">Rate this course</option>
+					<option value="">Excellent</option>
+					<option value="">Mediocre</option>
+					<option value="">Terrible</option>
+				</select>
+
+				<label class="label" for="user_comment">Comment:</label>
+				<textarea rows="10" name="user_comment" id="user_comment"></textarea>
+
+				<input class ="button button--submit" type="submit" name="submit" id="submit" value="submit">
+
+			</form>
+		</div>
+
+	</div> <!-- end content -->
+</main> <!-- end main -->
+
+
+<footer class="footer">
+
+	<div class="container container--footer">
+		<p class="copyright">Copyright © Alvin Chen - For Educational Purposes Only - Credits - <a href="http://pep.briangonzalez.org/" target="_blank">Pep.js</a>, <a href="http://fabien-d.github.io/alertify.js/" target="_blank">Alertify.js</a>, <a href="http://gridster.net/" target="_blank">Gridster</a></p>
+	</div>
+
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="scripts/jquery.gridster.min.js"></script>
+<script src="scripts/alertify.min.js"></script>
+<script src="scripts/prism.js"></script>
+<script src="scripts/jquery.pep.js"></script>
+<script src="scripts/jquery.gridster.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>

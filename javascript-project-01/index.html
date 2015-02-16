@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mario Matching Game</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Delius+Unicase:400,700' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo-classic.png" alt="Super Mario World"></a>
+		</div>
+
+		<div class="checker-container clearfix">
+			<div class="aboutgame hide1">
+				<h1>Mario Matching Game</h1>
+				<p>Tired of coding all day long? Mario is coming to a rescue. Train up your memory by playing this matching game inspired by Nintendo Classic Characters. Challenge yourself and use as few tries as possible. </p>
+				<p>Ready To Play?</p>
+				<button class="gamestart">Let's Play</button>
+				<button class="gamenotstart">Not Yet</button>
+			</div>
+			<div class="module module1">
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							<img src="img/mario-pix.png" alt="Mario Pixel Art Figure">
+						</div>
+						<div class="back">
+							<img class="backside" src="img/mario-fireball.png" alt="Mario Fire Attack">
+						</div>
+					</div>
+				</div>
+				<button class="btn_play_and_reset">Let Me Play</button>
+				</div>
+
+			<div class="module module2">
+				<div class="flip-container">
+					<div class="flipper">
+						<div class="front">
+							<img src="img/peach-pix.jpg" alt="Peach Pixel Art Figure">
+						</div>
+						<div class="back">
+							<img class="backside" src="img/bowser.png" alt="Bowser Figure">
+						</div>
+					</div>  <!-- end flipper -->
+				</div> <!-- end flip-container -->
+				<button class="btn_game_information">About The Game</button>
+			</div> <!-- end module module2 -->
+		</div> <!-- end of checker-container clearfix -->
+	</header>
+
+	<main class="no_game_board game_board" id="there">
+		<div class="output_turns output">
+			<img src="img/mariofaint.png" alt="Mario Lying on the Ground Figure">
+			<div class="box1">
+			<h1>Number of Turns</h1>
+			<p>0</p>
+			</div>
+		</div><!-- end output_turns -->
+
+		<div class="output_matched output">
+			<img src="img/lying-peach.png" alt="Peach Sitting on the Ground Figure">
+			<div class="box2">
+				<h1>Number of Matches</h1>
+				<p>0</p>
+			</div>
+		</div><!-- end output_matched -->
+
+		<div class="checker-wrapper">
+			<div class="checker-box clearfix">
+				<div class="row row_01">
+				  <div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_01 -->
+
+				<div class="row row_02">
+					<div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_02 -->
+
+				<div class="row row_03">
+				  <div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_03 -->
+
+				<div class="row row_04">
+				  <div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_04 -->
+
+				<div class="row row_05">
+				  <div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_05 -->
+
+				<div class="row row_06">
+				  <div class="col col_01">
+				  </div><!-- end col_01 -->
+				  <div class="col col_02">
+				  </div><!-- end col_02 -->
+				  <div class="col col_03">
+				  </div><!-- end col_03 -->
+				  <div class="col col_04">
+				  </div><!-- end col_04 -->
+				  <div class="col col_05">
+				  </div><!-- end col_05 -->
+				  <div class="col col_06">
+				  </div><!-- end col_06 -->
+				</div><!-- end row_06 -->
+			</div>
+			<div class="game_over hide">
+				<p>Congratulations! You Made It...</p>
+				<p>Wanna Challenge One More Time?</p>
+				<button class="tocontinue">Yes</button>
+				<button class="totop">No</button>
+				<img src="img/mario-peach.jpg" alt="Mario and Peach Waving Hands Figure">
+			</div> <!-- end of game_over hide -->
+		</div>
+	</main>
+
+	<footer>
+		<p>Copyright © Alvin Chen - For Educational Purposes Only - <a href="http://mario.nintendo.com/" target="_blank">Credits</a></p>
+	</footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

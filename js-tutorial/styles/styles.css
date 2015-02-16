@@ -1,0 +1,711 @@
+@charset 'utf-8';
+/* CSS Document */
+
+/*      TABLE OF CONTENT
+=================================
+
+1.0 - Reset
+2.0 - General styles
+    2.1 - clearfix
+3.0 - Header style
+4.0 - Body styles
+	4.1 - lesson 1 style
+	4.2 - lesson 2 style
+	4.3 - lesson 3 style
+	4.4 - form style
+5.0 - Footer style
+
+=================================*/
+
+
+
+/*      1.0 - Reset
+---------------------------------*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+main,
+section {
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+/*      2.0 - General styles
+---------------------------------*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: white;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+p {
+    margin-bottom: 20px;
+    color: black;
+    line-height: 1.8;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-highlight {
+    color: #f45c43;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* ##### 2.1 - Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*      3.0 - Header style
+---------------------------------*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    background-image: url(../img/geometry2.png);
+}
+
+.strips {
+    width: auto;
+}
+
+.strip {
+    float: left;
+    width: 10%;
+    height: 16px;
+    border-right: 2px solid white;
+    background-color: #f45c43;
+}
+
+.strip:last-child {
+    border-right: none;
+}
+
+.self-intro {
+    width: 920px;
+    margin: 200px auto 0;
+}
+
+.self-intro__avatar {
+    float: left;
+}
+
+.self-intro__message {
+    position: relative;
+    float: right;
+    width: 630px;
+    margin-top: 25px;
+    margin-right: 65px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    background-color: #333;;
+}
+
+.self-intro__message:after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: -15px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #333;
+    border-bottom: 15px solid transparent;
+}
+
+.self-intro__message p {
+    padding-left: 18px;
+    word-spacing: 1px;
+    color: white;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.primary-nav {
+    position: relative;
+    top: 404px;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    background-image: url(../img/body-bg.png);
+    box-shadow: 0 0 3px rgba(0,0,0,0.7);
+}
+
+.primary-nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-top: 4px solid #f45c43;
+    border-bottom: 1px solid #8d8d8d;
+    box-shadow: none;
+}
+
+.primary-nav__list {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.primary-nav__item {
+    float: left;
+    width: 20%;
+}
+
+.primary-nav__link {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #353535;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+.primary-nav__link:hover,
+.primary-nav__link:focus {
+    color: #f45c43;;
+}
+
+.logo:hover,
+.logo:focus {
+    color: initial;
+}
+
+.logo {
+    padding: 3px;
+    text-transform: capitalize;
+    color: #242424;
+    font-family: 'Tangerine', cursive;
+    font-size: 52px;
+}
+
+.logo span {
+    transition: color 0.4s ease-out;
+}
+
+.logo:hover span {
+    color: #f45c43;
+}
+
+.overivew {
+    margin-bottom: 150px;
+}
+
+/*      4.0 - Body style
+---------------------------------*/
+
+main {
+    position: relative;
+    top: 404px;
+    z-index: 10 ;
+    background-color: white;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.js-intro {
+    margin: 60px 0;
+}
+
+.js-intro > p:first-child,
+.js-intro > p:nth-child(4),
+.js-intro > p:nth-of-type(5) {
+    font-size: 2.4rem;
+}
+
+.js-intro > p:nth-child(2),
+.js-intro > p:nth-child(3) {
+    display: inline-block;
+    margin-left: 20px;
+    letter-spacing: 1.2px;
+    color: #323232;
+    border-bottom: 1px solid #888;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.js-intro > p:nth-child(3) {
+    margin-bottom: 50px;
+}
+
+.js-intro__box {
+    float: left;
+    width: 32%;
+    height: 430px;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #cdcdcd;
+}
+
+.js-intro__box:last-of-type {
+    margin-right: 0;
+}
+
+.js-intro__box h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.js-intro__box p {
+    font-size: 1.8rem;
+}
+
+/* ##### 4.1 - lesson 1 style --- image inspector */
+
+.lesson {
+    margin-bottom: 150px;
+}
+
+.lesson.lesson--03 {
+    margin-bottom: 50px;
+}
+
+.lesson:last-child {
+    margin-bottom: 50px;
+}
+
+.lesson h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lesson h2 {
+    display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #333;
+    font-weight: 400;
+}
+
+.lesson a {
+    color: #f45c43;
+    font-weight: 400;
+}
+
+.steps {
+    margin-top: 60px;
+    color: #333;
+    font-weight: 400;
+}
+
+.steps span {
+    color: #f45c43;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.demo1 {
+    height: 597px;
+    margin: 0 auto;
+}
+
+.demo1 .image {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../img/old-man.jpg') no-repeat center center;
+}
+
+.demo1 .image:first-child {
+    border-right: 1px solid #342420;
+}
+
+.demo1 .image.result {
+    background-position: 50% 25%;
+}
+.demo1 .image.viewer {
+    -webkit-background-size: 100%;
+       -moz-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
+}
+.demo1 .image.viewer .magnifier {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 43px;
+    height: 60px;
+    cursor: move;
+    opacity: 0.6;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEElEQVQIW2P8DwSMIMAABQA+HQQDNlbHLwAAAABJRU5ErkJggg==);
+}
+
+/* ##### 4.2 - lesson 2 style --- Alertify */
+
+.demo2 {
+    width: 750px;
+    margin: 0 auto;
+}
+
+.demo2 .button {
+    margin-right: 40px;
+}
+
+.demo2 .button:last-child {
+    margin-right: 0;
+}
+
+.button {
+    width: 220px;
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image:    -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image:     -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image:      -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image:         linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,.5);
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.button.button--english {
+    background-color: #fe1a00;
+}
+
+.button.button--french {
+    background-color: #5cb811;
+}
+
+.button.button--chinese {
+    background-color: #ffc44e;
+}
+
+.demo2 button:first-child:hover,
+.demo2 button:nth-child(2):hover,
+.demo2 button:last-child:hover {
+    outline: none;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:         linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+}
+
+/* ##### 4.3 - lesson 3 style --- Gridster */
+
+.ipad {
+    position: relative;
+    height: 680px;
+    background-image: url(../img/ipad-landscape.png);
+    background-repeat: no-repeat;
+    background-position: 40px 0;
+}
+
+.gridster ul {
+    position: absolute;
+    top: 60px;
+    left: 190px;
+}
+
+.gridster ul li:first-child {
+    background-image: url(../img/icon9.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(2) {
+    background-image: url(../img/icon2.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(3) {
+    background-image: url(../img/icon5.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(4) {
+    background-image: url(../img/icon4.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(5) {
+    background-image: url(../img/icon6.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(6) {
+    background-image: url(../img/icon7.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(7) {
+    background-image: url(../img/icon1.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(8) {
+    background-image: url(../img/icon3.png);
+    background-size: contain;
+}
+
+.gridster ul li:nth-child(9) {
+    background-image: url(../img/icon8.png);
+    background-size: contain;
+}
+
+/* ##### 4.4 - Form style */
+
+.form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+}
+
+.form__title {
+    display: block;
+    width: 200px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #f45c43;
+    border-radius: 5px;
+    font-size: 2.5rem;
+}
+
+.label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    text-align: right;
+    vertical-align: top;
+}
+
+[type='text'],
+select,
+textarea {
+    width: 350px;
+    padding: 5px;
+    font-size: 1.6rem;
+}
+
+.button.button--submit {
+    margin-top: 15px;
+    margin-left: 245px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    background-color: #f45c43;
+    font-size: 1.5rem;
+}
+
+.button--submit:hover {
+    opacity: 0.9;
+}
+
+/*      5.0 - Footer style
+---------------------------------*/
+
+.footer {
+    position: relative;
+    top: 520px;
+    text-align: center;
+    border-top: 1px solid #cdc4c4;
+    background: url(../img/geometry2.png);
+    font-size: 1.6rem;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
